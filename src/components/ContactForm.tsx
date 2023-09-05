@@ -38,7 +38,7 @@ export default function ContactForm() {
 
   if (subscribed) {
     return (
-      <p className="mb-10 min-h-[15rem] flex flex-col justify-center items-center text-center gap-4 py-10 px-10 border-[1px] rounded-lg bg-white">
+      <p className="mb-10 flex min-h-[15rem] flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white p-10 text-center">
         {`${t("home.form-thank")}`}
       </p>
     );
@@ -47,15 +47,15 @@ export default function ContactForm() {
       <form
         id="contact-form"
         onSubmit={handleSubmit(onSubmit)}
-        className="mb-10 flex flex-col justify-center items-center text-center gap-4 py-10 px-10 border-[1px] rounded-lg bg-white"
+        className="mb-10 flex flex-col items-center justify-center gap-4 rounded-lg border-[1px] bg-white p-10 text-center"
       >
         <h2 className="text-3xl font-bold">{t("home.contact-me")}</h2>
-        <div className="flex flex-col gap-2 w-full">
-          <div className="flex gap-2 w-full">
+        <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full gap-2">
             <input
               type="text"
               placeholder={t("home.form-name")}
-              className="bg-gray-100 rounded-lg px-5 py-3 w-full"
+              className="w-full rounded-lg bg-gray-100 px-5 py-3"
               {...register("name", {
                 required: `${t("home.form-error-name")}`,
               })}
@@ -63,7 +63,7 @@ export default function ContactForm() {
             <input
               type="email"
               placeholder={t("home.form-email")}
-              className="bg-gray-100 rounded-lg px-5 py-3 w-full"
+              className="w-full rounded-lg bg-gray-100 px-5 py-3"
               {...register("email", {
                 required: `${t("home.form-error-email-required")}`,
                 pattern: {
@@ -77,14 +77,14 @@ export default function ContactForm() {
           <textarea
             rows={4}
             placeholder={t("home.form-message")}
-            className="bg-gray-100 rounded-lg px-5 py-1"
+            className="rounded-lg bg-gray-100 px-5 py-1"
             {...register("message", {
               required: `${t("home.form-error-message")}`,
             })}
           />
         </div>
 
-        <button className="text-xl border-2 px-2 py-3 w-full font-bold rounded-lg hover:text-black hover:bg-white transition-all">
+        <button className="w-full rounded-lg border-2 px-2 py-3 text-xl font-bold transition-all hover:bg-white hover:text-black">
           {t("home.form-submit")}
         </button>
 

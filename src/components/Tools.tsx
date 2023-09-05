@@ -1,6 +1,6 @@
 export const FIGMA = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -23,7 +23,7 @@ export const FIGMA = () => {
 
 export const PHOTOSHOP = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         fill="currentColor"
         version="1.1"
@@ -56,7 +56,7 @@ export const PHOTOSHOP = () => {
 
 export const ILLUSTRATOR = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         fill="currentColor"
         version="1.1"
@@ -84,7 +84,7 @@ export const ILLUSTRATOR = () => {
 
 export const PREMIERE = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         fill="currentColor"
         version="1.1"
@@ -115,7 +115,7 @@ export const PREMIERE = () => {
 
 export const AFTER = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         fill="currentColor"
         version="1.1"

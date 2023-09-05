@@ -5,10 +5,9 @@ export const Linkedin = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="p-1 border-[2px] rounded-full border-white text-white hover:bg-white hover:text-main transition-colors">
+      <div className="rounded-full border-[2px] border-white p-1 text-white transition-colors hover:bg-white hover:text-main">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-brand-linkedin"
           width="35"
           height="35"
           viewBox="0 0 24 24"
@@ -36,10 +35,9 @@ export const Github = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="p-1 border-[2px] rounded-full border-white text-white hover:bg-white hover:text-main transition-colors">
+      <div className="rounded-full border-[2px] border-white p-1 text-white transition-colors hover:bg-white hover:text-main">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-brand-github-filled"
           width="35"
           height="35"
           viewBox="0 0 24 24"
@@ -68,10 +66,9 @@ export const Email = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="p-1 border-[2px] rounded-full border-white text-white hover:bg-white hover:text-main transition-colors">
+      <div className="rounded-full border-[2px] border-white p-1 text-white transition-colors hover:bg-white hover:text-main">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-mail-filled"
           width="35"
           height="35"
           viewBox="0 0 24 24"

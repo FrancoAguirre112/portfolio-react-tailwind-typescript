@@ -14,15 +14,15 @@ const Project: React.FC<ProjectProps> = ({
   link,
 }) => {
   return (
-    <li className="rounded-lg z-0 overflow-hidden">
+    <li className="z-0 overflow-hidden rounded-lg">
       <div
-        className="rounded-lg h-[14rem] max-w-[18rem] bg-center bg-cover z-0 "
+        className="z-0 h-[14rem] max-w-[18rem] rounded-lg bg-cover bg-center "
         style={{ backgroundImage: `url("${img}")` }}
       >
-        <div className="bg-main flex flex-col justify-end items-center text-center gap-6 p-10 rounded-lg h-[14rem] opacity-90 hover:opacity-100 transition-opacity">
-          <p className="text-lg font-semibold">{description}</p>
+        <div className="flex h-[14rem] flex-col items-center justify-end gap-6 rounded-lg bg-main p-10 text-center opacity-90 transition-opacity hover:opacity-100">
+          <p className=" text-lg font-semibold">{description}</p>
           <a
-            className="flex gap-1 items-center p-2 px-6 border-[2px] font-semibold border-white rounded-full hover:bg-white hover:text-main transition-colors"
+            className="flex items-center gap-1 rounded-full border-[2px] border-white p-2 px-6 font-semibold transition-colors hover:bg-white hover:text-main"
             href={link}
             target="_blank"
             rel="noopener noreferrer"

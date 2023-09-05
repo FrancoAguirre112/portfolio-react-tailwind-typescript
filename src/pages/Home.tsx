@@ -40,7 +40,7 @@ const Home = () => {
   useEffect(() => {
     setlangText(t("home.hover-icons"));
     setDesignText(t("home.hover-icons"));
-  }, [i18n.language]);
+  }, [i18n.language, t]);
 
   const languages = [
     { el: <HTML />, text: "HTML" },
@@ -65,16 +65,16 @@ const Home = () => {
   return (
     <main className="flex flex-col gap-12 text-center">
       {/* Navbar*/}
-      <nav className="flex justify-between items-center my-6 mx-4 md:mx-14">
+      <nav className="mx-4 my-6 flex items-center justify-between md:mx-14">
         <a href="/">
           <img className="max-w-[47px]" src={icon} alt={t("home.icon")} />
         </a>
-        <div className="flex gap-8 items-center">
+        <div className="flex items-center gap-8">
           <button
             onClick={() =>
               i18n.changeLanguage(i18n.language === "en" ? "es" : "en")
             }
-            className="text-main text-xl flex gap-1 hover:text-black"
+            className="flex gap-1 text-xl text-main hover:text-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Home = () => {
             {i18n.language === "en" ? "EN" : "ES"}
           </button>
           <a
-            className="flex gap-1 items-center text-xl p-2 px-6 border-[2px] font-semibold border-main text-main rounded-full hover:bg-main hover:text-white transition-colors"
+            className="flex items-center gap-1 rounded-full border-[2px] border-main p-2 px-6 text-xl font-semibold text-main transition-colors hover:bg-main hover:text-white"
             href="#contact"
           >
             {t("home.contact-me")}
@@ -106,25 +106,25 @@ const Home = () => {
       </nav>
 
       {/* Hero */}
-      <header className="flex flex-col items-center gap-2 mx-4 md:mx-24">
+      <header className="mx-4 flex flex-col items-center gap-2 md:mx-24">
         <h1 className="text-5xl font-bold">{t("home.hero-title")}</h1>
         <h3 className="text-3xl font-semibold">{t("home.hero-subtitle")}</h3>
-        <img className="max-w-[200px] mt-6" src={character} alt="" />
+        <img className="mt-6 max-w-[200px]" src={character} alt="" />
       </header>
 
       {/* Presentation */}
       <section className="bg-main text-white">
-        <div className="flex flex-col items-center text-justify gap-2 my-24 md:my-36 mx-4 md:mx-36 lg:mx-72">
+        <div className="mx-4 my-24 flex flex-col items-center gap-2 text-justify md:m-36 lg:mx-72">
           <h2 className="text-3xl font-bold">{t("home.presentation")}</h2>
           <p className="text-lg">{t("home.presentation-description")}</p>
         </div>
       </section>
 
       {/* Frontend & Designer Sections */}
-      <section className="text-[#141C3A] grid lg:grid-cols-2 justify-center gap-1 mt-[-8rem] md:mt-[-10rem] mx-4 md:mx-14">
+      <section className="mx-4 mt-[-8rem] grid justify-center gap-1 text-[#141C3A] md:mx-14 md:mt-[-10rem] lg:grid-cols-2">
         {/* Frontend */}
-        <div className="bg-white shadow-lg rounded-lg flex flex-col items-center gap-2 px-16 py-8">
-          <div className="p-3 bg-main rounded-full">
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-white px-16 py-8 shadow-lg">
+          <div className="rounded-full bg-main p-3">
             <img src={programming} alt={t("home.frontend-title")} />
           </div>
           <h2 className="text-3xl font-bold">{t("home.frontend-title")}</h2>
@@ -132,7 +132,7 @@ const Home = () => {
           <h3 className="mt-4 text-xl font-semibold text-main">
             {t("home.frontend-languages-title")}
           </h3>
-          <div className="flex justify-center flex-wrap gap-1">
+          <div className="flex flex-wrap justify-center gap-1">
             {languages?.map((item) => {
               return (
                 <div
@@ -150,12 +150,12 @@ const Home = () => {
               );
             })}
           </div>
-          <h3 className="text-xl font-semibold text-main mt-2">{langText}</h3>
+          <h3 className="mt-2 text-xl font-semibold text-main">{langText}</h3>
         </div>
 
         {/* Designer */}
-        <div className="bg-white shadow-lg rounded-lg flex flex-col items-center gap-2 px-16 py-8">
-          <div className="p-3 bg-main rounded-full">
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-white px-16 py-8 shadow-lg">
+          <div className="rounded-full bg-main p-3">
             <img src={brush} alt={t("home.designer-title")} />
           </div>
           <h2 className="text-3xl font-bold">{t("home.designer-title")}</h2>
@@ -163,7 +163,7 @@ const Home = () => {
           <h3 className="mt-4 text-xl font-semibold text-main">
             {t("home.designer-tools-title")}
           </h3>
-          <div className="flex justify-center flex-wrap gap-1">
+          <div className="flex flex-wrap justify-center gap-1">
             {designTools?.map((item) => {
               return (
                 <div
@@ -181,14 +181,14 @@ const Home = () => {
               );
             })}
           </div>
-          <h3 className="text-xl font-semibold text-main mt-2">{designText}</h3>
+          <h3 className="mt-2 text-xl font-semibold text-main">{designText}</h3>
         </div>
       </section>
 
       {/* Recent Work Section */}
-      <section className="flex flex-col items-center gap-6 mx-4 md:mx-24 mt-5 md:mt-10">
+      <section className="mx-4 mt-5 flex flex-col items-center gap-6 md:mx-24 md:mt-10">
         <h2 className="text-3xl font-bold">{t("home.recent-work-title")}</h2>
-        <ul className="text-white flex flex-col md:flex-row gap-2">
+        <ul className="flex flex-col gap-2 text-white md:flex-row">
           <Project
             img={movieSearch}
             description={t("home.recent-work-movie")}
@@ -199,7 +199,7 @@ const Home = () => {
             img={commerce}
             description={t("home.recent-work-commerce")}
             button={t("home.recent-work-learnMore")}
-            link="https://github.com/FrancoAguirre112/ecommerce-react-tailwind-typescript"
+            link="https://github.com/FrancoAguirre112/adaptable-ecommerce-react-tailwind-typescript-axios-yup-zod-zustand"
           />
           <Project
             img={portfolio}
@@ -209,7 +209,7 @@ const Home = () => {
           />
         </ul>
         <a
-          className="flex gap-1 items-center text-xl p-2 px-6 border-[2px] font-semibold border-main text-main rounded-full hover:bg-main hover:text-white transition-colors"
+          className="flex items-center gap-1 rounded-full border-[2px] border-main p-2 px-6 text-xl font-semibold text-main transition-colors hover:bg-main hover:text-white"
           href="https://github.com/FrancoAguirre112"
           target="_blank"
           rel="noopener noreferrer"
@@ -238,7 +238,7 @@ const Home = () => {
       <div className="mt-5 md:mt-10">
         <section
           id="contact"
-          className="relative mb-[-8rem] mx-4 md:mx-14 z-10"
+          className="relative z-10 mx-4 mb-[-8rem] md:mx-14"
         >
           <ContactForm />
         </section>

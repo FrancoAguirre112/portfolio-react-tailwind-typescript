@@ -1,6 +1,6 @@
 export const HTML = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -22,7 +22,7 @@ export const HTML = () => {
 
 export const CSS = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -44,7 +44,7 @@ export const CSS = () => {
 
 export const JS = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -67,7 +67,7 @@ export const JS = () => {
 
 export const TS = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -91,7 +91,7 @@ export const TS = () => {
 
 export const GIT = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -118,7 +118,7 @@ export const GIT = () => {
 
 export const REACT = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -145,7 +145,7 @@ export const REACT = () => {
 
 export const ANGULAR = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -168,7 +168,7 @@ export const ANGULAR = () => {
 
 export const TAILWIND = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -189,7 +189,7 @@ export const TAILWIND = () => {
 
 export const BOOTSTRAP = () => {
   return (
-    <div className="bg-main p-2 rounded-lg text-white">
+    <div className="rounded-lg bg-main p-2 text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
