@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 
-import icon from "../assets/icons/icon.webp";
-import brush from "../assets/icons/brush.svg";
-import programming from "../assets/icons/programming.svg";
-import character from "../assets/images/character.webp";
+import icon from "../public/assets/icons/icon.webp"
+import brush from "../public/assets/icons/brush.svg";
+import programming from "../public/assets/icons/programming.svg";
+import character from "../public/assets/images/character.webp";
 import {
   HTML,
   CSS,
@@ -23,13 +23,13 @@ import {
   AFTER,
 } from "../components/Tools";
 
-import commerce from "../assets/images/projects/commerce.webp";
-import movieSearch from "../assets/images/projects/movieSearch.webp";
+import commerce from "../public/assets/images/projects/commerce.webp";
+import movieSearch from "../public/assets/images/projects/movieSearch.webp";
 import Project from "../components/Project";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
-import portfolio from "../assets/images/projects/portfolio.webp";
+import portfolio from "../public/assets/images/projects/portfolio.webp";
 
 const Home = () => {
   const [t, i18n] = useTranslation("global");
