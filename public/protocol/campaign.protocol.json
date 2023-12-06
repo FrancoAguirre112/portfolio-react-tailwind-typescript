@@ -3,6 +3,7 @@
   "published": true,
   "types": {
     "campaign": {
+      "schema": "https://francoaguirre.com.ar/schema/campaign.schema.json",
       "dataFormats": ["application/json"]
     }
   },
