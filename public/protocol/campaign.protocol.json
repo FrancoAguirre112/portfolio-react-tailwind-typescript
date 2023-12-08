@@ -16,6 +16,10 @@
         },
         {
           "who": "anyone",
+          "can": "query"
+        },
+        {
+          "who": "anyone",
           "can": "write"
         }
       ]
