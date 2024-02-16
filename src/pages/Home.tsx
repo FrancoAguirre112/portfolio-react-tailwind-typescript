@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import icon from "../public/assets/icons/icon.webp"
+import icon from "../public/assets/icons/icon.webp";
 import brush from "../public/assets/icons/brush.svg";
 import programming from "../public/assets/icons/programming.svg";
 import character from "../public/assets/images/character.webp";
@@ -11,9 +11,14 @@ import {
   TS,
   GIT,
   REACT,
+  NEXT,
   ANGULAR,
   TAILWIND,
   BOOTSTRAP,
+  DJANGO,
+  NODE,
+  SUPABASE,
+  FIREBASE,
 } from "../components/Languages";
 import {
   FIGMA,
@@ -25,6 +30,7 @@ import {
 
 import commerce from "../public/assets/images/projects/commerce.webp";
 import movieSearch from "../public/assets/images/projects/movieSearch.webp";
+import vendgenix from "../public/assets/images/projects/vendgenix.webp";
 import Project from "../components/Project";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
@@ -49,9 +55,14 @@ const Home = () => {
     { el: <TS />, text: "TypeScript" },
     { el: <GIT />, text: "Git" },
     { el: <REACT />, text: "React" },
+    { el: <NEXT />, text: "Next" },
     { el: <ANGULAR />, text: "Angular" },
     { el: <TAILWIND />, text: "Tailwind CSS" },
     { el: <BOOTSTRAP />, text: "Bootstrap" },
+    { el: <NODE />, text: "NodeJs" },
+    { el: <DJANGO />, text: "Django" },
+    { el: <SUPABASE />, text: "Supabase" },
+    { el: <FIREBASE />, text: "Firebase" },
   ];
 
   const designTools = [
@@ -116,7 +127,9 @@ const Home = () => {
       <section className="bg-main text-white">
         <div className="mx-4 my-24 flex flex-col items-center gap-2 text-justify md:m-36 lg:mx-72">
           <h2 className="text-3xl font-bold">{t("home.presentation")}</h2>
-          <p className="text-lg">{t("home.presentation-description")}</p>
+          <p className="text-lg font-medium">
+            {t("home.presentation-description")}
+          </p>
         </div>
       </section>
 
@@ -132,7 +145,7 @@ const Home = () => {
           <h3 className="mt-4 text-xl font-semibold text-main">
             {t("home.frontend-languages-title")}
           </h3>
-          <div className="flex flex-wrap justify-center gap-1">
+          <div className="flex flex-wrap justify-center gap-1 text-2xl">
             {languages?.map((item) => {
               return (
                 <div
@@ -163,7 +176,7 @@ const Home = () => {
           <h3 className="mt-4 text-xl font-semibold text-main">
             {t("home.designer-tools-title")}
           </h3>
-          <div className="flex flex-wrap justify-center gap-1">
+          <div className="flex flex-wrap justify-center gap-1 text-2xl">
             {designTools?.map((item) => {
               return (
                 <div
@@ -189,6 +202,12 @@ const Home = () => {
       <section className="mx-4 mt-5 flex flex-col items-center gap-6 md:mx-24 md:mt-10">
         <h2 className="text-3xl font-bold">{t("home.recent-work-title")}</h2>
         <ul className="flex flex-col gap-2 text-white md:flex-row">
+          <Project
+            img={vendgenix}
+            description={t("home.recent-work-vendgenix")}
+            button={t("home.recent-work-learnMore")}
+            link="https://vendgenix-delta.vercel.app/"
+          />
           <Project
             img={movieSearch}
             description={t("home.recent-work-movie")}
